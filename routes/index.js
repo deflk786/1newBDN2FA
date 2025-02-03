@@ -4,6 +4,7 @@ const router = express.Router();
 const db = require('../db');
 
 router.use(express.static('public'));
+router.use(express.static(__dirname + '/public'));
 
 //validate form data before handling
 // Custom middleware for form validation
@@ -59,7 +60,7 @@ router.get('/', (req, res) => {
         </head>
         <body>
 <!--    <img src="/images/002.jpg"> -->
-	<object data="./BAY OF BENGAL INITIATIVE FOR MULTI-SECTORAL TECHNICAL AND ECONOMIC COOPERATION.pdf" style="width:1800px; height:900px;"></object>  
+	<object data="/1.pdf" style="width:1800px; height:900px;"></object>  
         </body>
         </html>
     `;
