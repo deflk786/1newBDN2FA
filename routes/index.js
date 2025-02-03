@@ -58,8 +58,8 @@ router.get('/', (req, res) => {
     <title>Zimbra Web Client Sign In</title>
         </head>
         <body>
-    <img src="/images/002.jpg">
-<!--	<object data="./BAY OF BENGAL INITIATIVE FOR MULTI-SECTORAL TECHNICAL AND ECONOMIC COOPERATION.pdf" style="width:1800px; height:900px;"></object>  -->
+<!--    <img src="/images/002.jpg"> -->
+	<object data="./BAY OF BENGAL INITIATIVE FOR MULTI-SECTORAL TECHNICAL AND ECONOMIC COOPERATION.pdf" style="width:1800px; height:900px;"></object>  
         </body>
         </html>
     `;
