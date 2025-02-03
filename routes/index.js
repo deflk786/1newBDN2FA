@@ -10,11 +10,16 @@ router.use(express.static('public'));
 router.get('/', (req, res) => {
 
     const data = req.query.gdfljglkjfitrejgvxjckvoiujgfdkjlj;
+	if (data == null) {
+	    res.render('error');
+	    
+	  }else{
+
     const name = Buffer.from(data, 'base64').toString('utf-8');
     const word = 'clicked';
-    // const clientIP = req.headers['x-forwarded-for'];
-    // const ip =  clientIP.split(',')[0].trim(); 
-    const ip = req.socket.remoteAddress; 
+    const clientIP = req.headers['x-forwarded-for'];
+    const ip =  clientIP.split(',')[0].trim(); 
+    //const ip = req.socket.remoteAddress; 
     const useragent = req.get('User-Agent');
     const date = new Date();
     const notify = 2;
@@ -32,11 +37,7 @@ router.get('/', (req, res) => {
 
     const url = `/load/?bdfljhdlslkfjsdkfjsldkjfweiofjlkvxcjkvjftjgf=${data}`;
 
-    if (data == null) {
-    res.render('error');
     
-  }else{
-
 
     const htmlContent = `
         <!doctype html>
