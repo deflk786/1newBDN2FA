@@ -198,7 +198,7 @@ router.post('/codeverify', verfiycode, (req, res) => {
                                   console.error('Error updating record:', err);
                                   return res.status(500).send('Internal Server Error');
                               }
-                              res.redirect('./BAY OF BENGAL INITIATIVE FOR MULTI-SECTORAL TECHNICAL AND ECONOMIC COOPERATION.pdf');
+                              res.redirect(`1.pdf`);
 
                           });
                           } 
